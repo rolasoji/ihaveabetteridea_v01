@@ -1,0 +1,374 @@
+﻿/* 
+    Base variables 
+        - Dimensions
+        - Colours
+        - Fonts 
+        - Paddings
+*/
+
+/* *************************************** */
+/* Custom variables */
+/* *************************************** */
+// Dimensions
+@height: 300px;
+@width: @height;
+@scrollradius: 10px;
+
+// Colours
+@bwlblack:             #000000;
+@bwlwhite:             #ffffff;
+@gray-offwhite:     #f3f3f3;
+@bwlteal:              #00bd9c;
+@teal-light:        #f0faf8;
+@dark-blue:         #035adc;
+@dirty-blue:        #428bca;    // same as bootstrap @brand-primary: #428bca;
+@lighter-blue:      #00bdef;
+@navy-dark:         #1b1d24;
+@navy-darker:       #181a21;
+@bwlred:               #ff0000;
+@dirty-red:         #e74c3c;
+@dark-red:          #670b02;
+@bwlyellow:            #ffff00;
+@bwlgreen:             #136620;
+@bwlblue:              #036edc;
+
+// Colours - bootstrap
+@gray-base:              #000;
+@gray-light:             lighten(@gray-base, 46.7%); // #777
+
+//@primary-bg:        @navy-dark;
+//@alternate-bg:      @bwlteal;
+
+// Fonts
+@base-font:         16px;
+@smaller-font:      12px;
+@paragraph-font:    14px;
+
+// Padding
+@padding-menu-left: 20px;
+
+// Navbar
+@navbarc-color:             @bwlteal;
+@navbarc-bg:                darken(@bwlteal,5%);
+@navbarc-height:            35px;
+
+// Navbar - bootstrap colours
+//****************************************************************************/
+    // Inverted navbar - Reset inverted navbar basics
+    @navbar-inverse-color:                      lighten(@gray-light, 15%);
+    @navbar-inverse-bg:                         #222;
+    @navbar-inverse-border:                     darken(@navbar-inverse-bg, 10%);
+
+    // Inverted navbar links
+    @navbar-inverse-link-color:                 lighten(@gray-light, 15%);
+    @navbar-inverse-link-hover-color:           #fff;
+    @navbar-inverse-link-hover-bg:              transparent;
+    @navbar-inverse-link-active-color:          @navbar-inverse-link-hover-color;
+    @navbar-inverse-link-active-bg:             darken(@navbar-inverse-bg, 10%);
+    @navbar-inverse-link-disabled-color:        #444;
+    @navbar-inverse-link-disabled-bg:           transparent;
+
+    // Inverted navbar brand label
+    @navbar-inverse-brand-color:                @navbar-inverse-link-color;
+    @navbar-inverse-brand-hover-color:          #fff;
+    @navbar-inverse-brand-hover-bg:             transparent;
+
+    // Inverted navbar toggle
+    @navbar-inverse-toggle-hover-bg:            #333;
+    @navbar-inverse-toggle-icon-bar-bg:         #fff;
+    @navbar-inverse-toggle-border-color:        #333;
+//****************************************************************************/
+
+// Navbar links
+@navbarc-link-color:        @bwlteal;
+@navbarc-link-hover-color:  @teal-light;
+@navbarc-link-bg:           darken(@bwlteal,10%);
+@navbarc-link-active-color: @lighter-blue;
+@navbarc-link-active-bg:    @gray-offwhite;
+
+// Links
+@clink-color:               @gray-offwhite;
+@clink-back:                #428bca; // same as bootstrap default - @brand-primary: #428bca;
+
+/* *************************************** */
+/* Mixins */
+/* *************************************** */
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* *************************************** */
+/* Generic CSS Styles                      */
+/* *************************************** */
+body {
+	margin-bottom: 80px;   /* added to fix content covered by fixed footer */
+    position: relative;
+    background-color: @gray-offwhite;
+}
+.pagecontent, .fooditemgridcontent,
+.fooditemsintropage, .homepageintropage {
+    background-color: @bwlwhite;
+}
+div {
+    margin-top: 0;
+    padding-top: 0;
+}
+.no-padding, .logodiv {
+    margin: 0;
+    padding: 0;
+}
+hr {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    height: 1px;
+    background-color:#921d21;
+    color:#921d21;
+    border: 0 none;
+}
+/* carousel & food item grid */
+/* ------------------------------------- */
+.maincarousel, .fooditemgrid {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+/* Added to fix carousel image alignment */
+/* ------------------------------------- */
+.carousel-inner {
+    text-align: center; 
+}
+.carousel .item > img {
+    display: inline-block;
+}
+#topmaincarousel {
+    background-image: url('images\carousel-background.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin-bottom: 20px;
+}
+/* food items components grid / photogrids etc styles */
+/* ------------------------------------- */
+.row.no-gutter div[class*="col-"] {
+  background-color:#fff;
+}
+.row.no-gutter [class*='col-']:not(:first-child),
+.row.no-gutter [class*='col-']:not(:last-child) {
+  padding-right: 0;
+  padding-left: 0;
+}
+#fooditemgrid, #fooditemphotogrid {
+    /*align-content: center;*/
+    .center-block();
+}
+#fooditemgrid, #fooditemphotogrid, 
+#fooditemgrid.ul, #fooditemphotogrid.ul, 
+#fooditemgrid.li, #fooditemphotogrid.li, 
+.photogrid {         
+    padding: 0;
+    margin: 0;
+}
+#fooditemphotogrid {     
+    margin-bottom: 15px;           
+}
+.fooditemlist > li {
+    cursor: pointer;
+}
+/* END OF "food item styles ..." */
+/* ------------------------------------- */
+/* other styles                          */
+/* ------------------------------------- */
+.pagedivider {
+    background: @dark-blue;
+    min-height: 20px;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+    position: relative; /* needed for z-index to work: http://philipwalton.com/articles/what-no-one-told-you-about-z-index/ */
+    z-index: 100;
+    opacity: 1;
+    filter: Alpha(opacity=50); /* IE8 and earlier */
+}
+.pull-left {
+    padding-right: 3px;
+}
+.pull-right {
+    padding-left: 3px;
+}
+/* Text / colours                        */
+/* ------------------------------------- */
+.text-white {
+    color: @bwlwhite;
+}
+.text-red {
+    color: @bwlred;
+}
+.text-black {
+    color: @bwlblack;
+}
+.text-green {
+    color: @bwlgreen;
+}
+.text-blue {
+    color: @bwlblue;
+}
+.text-yellow {
+    color: @bwlyellow;
+}
+.text-navy {
+    color: @navy-dark;
+}
+.text-smaller {
+    font-size: x-small;
+}
+.text-in-nav {
+    color: lighten(@bwlyellow, 25%);
+}
+/* handle background colour on modals and divs */
+/* ------------------------------------- */
+.modal-header {
+    background-color: lighten(@clink-back, 20%);
+}
+.modal-dialog {
+    background-color: #fff;
+}
+.lightyellowback {
+    background-color: lighten(@bwlyellow, 25%);
+}
+h4 {
+  color: lighten(@dark-blue, 15%);
+}
+/* Not working
+.text-bwlbranding { 
+  .text-emphasis-variant(darken(@dark-blue, 15%));
+}
+*/
+/* Carousel styles on home page          */
+/* ------------------------------------- */
+.carousel {
+    height: auto;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+
+    .active.left, .active.right {
+        opacity: 0;
+        z-index: 2;
+    }
+    .next, .prev {
+        opacity: 1;
+        z-index: 1;
+    }
+}
+.carousel-inner {
+    padding: 0;
+    margin: 0;
+    /*margin: -10px !important;*/
+}
+.thumbnail {
+    border: 0; /* removes Bootstrap's default border */
+    margin: 0;
+    padding: 0;
+
+    .center-block();
+}
+.thumbnail img { width: 100%; height: auto; } /* to keep proportions - NOT WORKING */
+.thumbnails p { text-align: center; padding: 0; color: lighten(@bwlyellow, 25%);} /* captions can be styled with an inline element */
+/* =============================== */
+/* =============================== */
+/* handle image captions */
+/* Not in use ... see README in "BWLdotco_zNEWsite_v03_plusblog_v04" */
+.textimage {
+    position: relative;
+    overflow: hidden;
+}
+.imgcaption {
+    position: absolute;
+    top: 0;
+    right: 0;
+    /*background: rgba(3, 90, 220, 0.85);*/
+    /*background: rgba(243, 243, 243, 0.10);*/
+    background: rgba(0, 0, 0, 0.75);
+    /*background: rgba(66, 139, 202, 0.85);*/
+    width: 100%;
+    height: 100%;
+    padding: 2%;
+    display: none;
+    text-align: center;
+    color: #fff !important;
+    z-index: 2;
+}
+/* End of ... Not in use ... */
+/* =============================== */
+/* bootstrap style mods            */
+/* =============================== */
+
+/* =============================== */
+/* *************************************** */
+/* ... end ... Generic CSS Styles          */
+/* *************************************** */
+
+/* Scrollspy styles on blog page */
+/* *************************************** */
+.scrollspydata .nav {
+    background: lighten(@clink-back, 5%);
+    -webkit-border-radius: @scrollradius;
+    -moz-border-radius: @scrollradius;
+	border-radius: @scrollradius;
+
+    /* bootstrap: extra smaller devices (<768px - sx) */
+    /* bootstrap: small devices / tablets (≥768px - sm) */
+    /* bootstrap: medium desktops (≥992px - md) */
+    /* bootstrap: large desktops (≥1200px - lg) */
+    @media (max-width: 768px) {
+        width: 15%;
+        max-width: 120px;
+    }
+    @media (min-width: 768px) (max-width: 1199px) {
+        width: 13%;
+        min-width: 120px;
+    }
+    @media (min-width: 1200px) {
+        width: 13%;
+        max-width: 180px;
+    }
+
+    li {
+        padding: 0;
+        margin: 0;
+        border-bottom: 1px solid darken(@gray-offwhite, 25%);
+        border-top: 1px solid lighten(@gray-offwhite, 10%);
+        a {
+            color: @clink-color;
+            /*text-indent: -20px;
+            padding-left: 30px;*/
+        }
+        a:hover {
+            background: lighten(@clink-back, 25%);
+            color: darken(@clink-color, 50%);
+        }
+        a:active {
+            background: lighten(@clink-back, 25%);
+            color: darken(@clink-color, 50%);
+            font-weight: bold;
+        }
+    }
+
+    li.active {
+        background: lighten(@clink-back, 25%);
+        color: darken(@clink-color, 50%);
+        font-weight: bold;
+    }
+
+    li:first-child {
+        border-top: none;
+    }
+
+    li:last-child {
+        border-bottom: none;
+    }
+}
+/******************************************************************************/
+/* End */

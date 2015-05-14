@@ -1,0 +1,486 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{AD43B5AA-C497-4E0C-9119-543E6D5276C6}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ihaveabetteridea_v01</RootNamespace>
+    <AssemblyName>ihaveabetteridea_v01</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>ihaveabetteridea_v01.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>ihaveabetteridea_v01.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\carousel-background.png" />
+    <Content Include="images\carouselimages\carousel_asparagus.jpg" />
+    <Content Include="images\carouselimages\carousel_brazilnuts.jpg" />
+    <Content Include="images\carouselimages\carousel_cereal.jpg" />
+    <Content Include="images\carouselimages\carousel_filledtomatoes.jpg" />
+    <Content Include="images\carouselimages\carousel_fruits.jpg" />
+    <Content Include="images\carouselimages\carousel_lobstercrabs.jpg" />
+    <Content Include="images\carouselimages\carousel_rice.jpg" />
+    <Content Include="images\carouselimages\carousel_salad.jpg" />
+    <Content Include="images\facebook_image.png" />
+    <Content Include="images\fgrid100x100black.png" />
+    <Content Include="images\fgrid100x100green.png" />
+    <Content Include="images\fgrid100x100red.png" />
+    <Content Include="images\fgrid100x100yellow.png" />
+    <Content Include="images\fgrid200x200black.png" />
+    <Content Include="images\fgrid200x200green.png" />
+    <Content Include="images\fgrid200x200red.png" />
+    <Content Include="images\fgrid200x200yellow.png" />
+    <Content Include="images\fgrid350x3500red.png" />
+    <Content Include="images\fgrid350x350black.png" />
+    <Content Include="images\fgrid350x350green.png" />
+    <Content Include="images\fgrid350x350yellow.png" />
+    <Content Include="images\fgrid450x450black.png" />
+    <Content Include="images\fgrid450x450green.png" />
+    <Content Include="images\fgrid450x450red.png" />
+    <Content Include="images\fgrid450x450yellow.png" />
+    <Content Include="images\foods-cat_256px.png" />
+    <Content Include="images\grid-t.png" />
+    <Content Include="images\grid-t2.png" />
+    <Content Include="images\IMG_0726-3.JPG" />
+    <Content Include="images\IMG_0727-2.JPG" />
+    <Content Include="images\IMG_0728-1.JPG" />
+    <Content Include="images\logoBW.png" />
+    <Content Include="images\logo_brand.png" />
+    <Content Include="images\logo_brandnew.png" />
+    <Content Include="images\logo_mini.png" />
+    <Content Include="images\social_bookmarks\digg.png" />
+    <Content Include="images\social_bookmarks\email.png" />
+    <Content Include="images\social_bookmarks\facebook.png" />
+    <Content Include="images\social_bookmarks\google_buzz.png" />
+    <Content Include="images\social_bookmarks\twitter.png" />
+    <Content Include="images\sweetner_Runny_hunny_128px.jpg" />
+    <Content Include="images\touch_screen_devices.jpg" />
+    <Content Include="images\transparent-bg.png" />
+    <Content Include="images\transparent.gif" />
+    <Content Include="images\transparent.png" />
+    <Content Include="images\transplaceholder.png" />
+    <Content Include="images\uel272before_lg.jpg" />
+    <Content Include="images\uelremyafter_lg.jpg" />
+    <Content Include="images\wellness_sections_red.png" />
+    <Content Include="index.php" />
+    <Content Include="Web.config" />
+    <Content Include="_components\alertifyJS\0.3.11\example\assets\css\main.css" />
+    <Content Include="_components\alertifyJS\0.3.11\example\assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="_components\alertifyJS\0.3.11\example\assets\img\banner.jpg" />
+    <Content Include="_components\alertifyJS\0.3.11\example\assets\img\dialogs.png" />
+    <Content Include="_components\alertifyJS\0.3.11\example\assets\img\treehouse.png" />
+    <Content Include="_components\alertifyJS\0.3.11\example\assets\img\webdev.png" />
+    <Content Include="_components\alertifyJS\0.3.11\example\assets\js\lib\sh\shBrushJScript.js" />
+    <Content Include="_components\alertifyJS\0.3.11\example\assets\js\lib\sh\shCore.css" />
+    <Content Include="_components\alertifyJS\0.3.11\example\assets\js\lib\sh\shCore.js" />
+    <Content Include="_components\alertifyJS\0.3.11\example\assets\js\lib\sh\shCoreDefault.css" />
+    <Content Include="_components\alertifyJS\0.3.11\example\index.html" />
+    <Content Include="_components\alertifyJS\0.3.11\Gruntfile.js" />
+    <Content Include="_components\alertifyJS\0.3.11\lib\alertify.js" />
+    <Content Include="_components\alertifyJS\0.3.11\lib\alertify.min.js" />
+    <Content Include="_components\alertifyJS\0.3.11\src\alertify.js" />
+    <Content Include="_components\alertifyJS\0.3.11\test\index.html" />
+    <Content Include="_components\alertifyJS\0.3.11\test\qunit\qunit.css" />
+    <Content Include="_components\alertifyJS\0.3.11\test\qunit\qunit.js" />
+    <Content Include="_components\alertifyJS\0.3.11\test\specs\alert.test.js" />
+    <Content Include="_components\alertifyJS\0.3.11\test\specs\confirm.test.js" />
+    <Content Include="_components\alertifyJS\0.3.11\test\specs\global.test.js" />
+    <Content Include="_components\alertifyJS\0.3.11\test\specs\log.test.js" />
+    <Content Include="_components\alertifyJS\0.3.11\test\specs\prompt.test.js" />
+    <Content Include="_components\alertifyJS\0.3.11\themes\alertify.bootstrap.css" />
+    <Content Include="_components\alertifyJS\0.3.11\themes\alertify.core.css" />
+    <Content Include="_components\alertifyJS\0.3.11\themes\alertify.default.css" />
+    <Content Include="_components\captcha\form.php" />
+    <Content Include="_components\captcha\gpl.txt" />
+    <Content Include="_components\captcha\monofont_read_me.txt" />
+    <Content Include="_components\css\bootstrap.css" />
+    <Content Include="_components\css\bootstrap.min.css" />
+    <Content Include="_components\css\customstyles.css" />
+    <Content Include="_components\css\customstyles.min.css" />
+    <Content Include="_components\font-awesome\4.2.0\css\font-awesome.css" />
+    <Content Include="_components\font-awesome\4.2.0\css\font-awesome.min.css" />
+    <Content Include="_components\font-awesome\4.2.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="_components\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="_components\js\ajax_captcha.js" />
+    <Content Include="_components\js\bootstrap.js" />
+    <Content Include="_components\js\bootstrap.min.js" />
+    <Content Include="_components\js\customJS.js" />
+    <Content Include="_components\js\forms.js" />
+    <Content Include="_components\js\sha512.js" />
+    <Content Include="_components\phpincludes\footer.php" />
+    <Content Include="_components\phpincludes\header.php" />
+    <Content Include="_components\phpincludes\header_menu.php" />
+    <Content Include="_components\phpincludes\header_menu_wGrids.php" />
+    <Content Include="_components\phpincludes\header_wordpress.php" />
+    <Content Include="_components\phpincludes\popup_contact.php" />
+    <Content Include="_components\phpincludes\popup_login.php" />
+    <Content Include="_components\phpincludes\popup_viewmore.php" />
+    <Content Include="_components\phpincludes\sidebar_beforeafter.php" />
+    <Content Include="_components\phpincludes\sidebar_register.php" />
+    <Content Include="_components\phpincludes\sidebar_tools_tabs.php" />
+    <Content Include="_components\phpincludes\snippet_beforeafter_grid.php" />
+    <Content Include="_components\phpincludes\snippet_captcha_form.php" />
+    <Content Include="_components\phpincludes\snippet_captcha_processing.php" />
+    <Content Include="_components\phpincludes\snippet_database_config.php" />
+    <Content Include="_components\phpincludes\snippet_database_connection.php" />
+    <Content Include="_components\phpincludes\snippet_DBtesting.php" />
+    <Content Include="_components\phpincludes\snippet_fooditems_grid.php" />
+    <Content Include="_components\phpincludes\snippet_functions.php" />
+    <Content Include="_components\phpincludes\snippet_gptaccordion_alcohol.php" />
+    <Content Include="_components\phpincludes\snippet_gptaccordion_eatexer.php" />
+    <Content Include="_components\phpincludes\snippet_gptaccordion_eathabs.php" />
+    <Content Include="_components\phpincludes\snippet_gptaccordion_fatcontent.php" />
+    <Content Include="_components\phpincludes\snippet_gptaccordion_foodGindex.php" />
+    <Content Include="_components\phpincludes\snippet_gptaccordion_foodportns.php" />
+    <Content Include="_components\phpincludes\snippet_gptaccordion_foodprep.php" />
+    <Content Include="_components\phpincludes\snippet_gptaccordion_gentips.php" />
+    <Content Include="_components\phpincludes\snippet_gptaccordion_motivetips.php" />
+    <Content Include="_components\phpincludes\snippet_gptaccordion_prepkey.php" />
+    <Content Include="_components\phpincludes\snippet_gptaccordion_sugarcontent.php" />
+    <Content Include="_components\phpincludes\snippet_loginform.php" />
+    <Content Include="_components\phpincludes\snippet_login_processing.php" />
+    <Content Include="_components\phpincludes\snippet_logout_processing.php" />
+    <Content Include="_components\phpincludes\snippet_regform_processing.php" />
+    <Content Include="_components\phpincludes\subpage_blog_posts.php" />
+    <Content Include="_components\phpincludes\subpage_disclaimer.php" />
+    <Content Include="_components\phpincludes\subpage_faq_content.php" />
+    <Content Include="_components\phpincludes\subpage_fooditems_grid.php" />
+    <Content Include="_components\phpincludes\subpage_fooditems_intro.php" />
+    <Content Include="_components\phpincludes\subpage_gpt_accordion.php" />
+    <Content Include="_components\phpincludes\subpage_homepage_intro.php" />
+    <Content Include="_components\phpincludes\subpage_latestinfo_grid.php" />
+    <Content Include="_components\phpincludes\subpage_regform.php" />
+    <Content Include="_components\phpincludes\subpage_topmain_carousel.php" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\js\affix.js" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\js\alert.js" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\js\button.js" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\js\carousel.js" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\js\collapse.js" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\js\dropdown.js" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\js\modal.js" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\js\popover.js" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\js\scrollspy.js" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\js\tab.js" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\js\tests\index.html" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\js\tests\unit\affix.js" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\js\tests\unit\alert.js" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\js\tests\unit\button.js" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\js\tests\unit\carousel.js" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\js\tests\unit\collapse.js" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\js\tests\unit\dropdown.js" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\js\tests\unit\modal.js" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\js\tests\unit\phantom.js" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\js\tests\unit\popover.js" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\js\tests\unit\scrollspy.js" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\js\tests\unit\tab.js" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\js\tests\unit\tooltip.js" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\js\tests\vendor\jquery.min.js" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\js\tests\vendor\qunit.css" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\js\tests\vendor\qunit.js" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\js\tests\visual\affix.html" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\js\tests\visual\alert.html" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\js\tests\visual\button.html" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\js\tests\visual\carousel.html" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\js\tests\visual\collapse.html" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\js\tests\visual\dropdown.html" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\js\tests\visual\modal.html" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\js\tests\visual\popover.html" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\js\tests\visual\scrollspy.html" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\js\tests\visual\tab.html" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\js\tests\visual\tooltip.html" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\js\tooltip.js" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\js\transition.js" />
+    <Content Include="_components\z_processCOMPONENTS\myLESS\customstyles.css" />
+    <Content Include="_components\z_processCOMPONENTS\myLESS\customstyles.min.css" />
+    <Content Include="_components\z_processCOMPONENTS\z_OLDphpincludes\subpage_loginform.php" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="_components\alertifyJS\0.3.11\.gitignore" />
+    <Content Include="_components\alertifyJS\0.3.11\.travis.yml" />
+    <Content Include="_components\alertifyJS\0.3.11\bower.json" />
+    <Content Include="_components\alertifyJS\0.3.11\Contributors.md" />
+    <Content Include="_components\alertifyJS\0.3.11\example\assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="_components\alertifyJS\0.3.11\example\assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="_components\alertifyJS\0.3.11\example\assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="_components\alertifyJS\0.3.11\example\assets\fonts\FontAwesome.otf" />
+    <Content Include="_components\alertifyJS\0.3.11\package.json" />
+    <Content Include="_components\alertifyJS\0.3.11\README.md" />
+    <Content Include="_components\captcha\DejaVuSans-Bold.ttf" />
+    <Content Include="_components\captcha\DejaVuSans.ttf" />
+    <Content Include="_components\captcha\DejaVuSansMono-Bold.ttf" />
+    <Content Include="_components\captcha\DejaVuSansMono.ttf" />
+    <Content Include="_components\captcha\DejaVuSerif-Bold.ttf" />
+    <Content Include="_components\captcha\DejaVuSerif.ttf" />
+    <Content Include="_components\captcha\monofont.ttf" />
+    <Content Include="_components\font-awesome\4.2.0\fonts\fontawesome-webfont.eot" />
+    <Content Include="_components\font-awesome\4.2.0\fonts\fontawesome-webfont.ttf" />
+    <Content Include="_components\font-awesome\4.2.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="_components\font-awesome\4.2.0\fonts\FontAwesome.otf" />
+    <Content Include="_components\font-awesome\4.2.0\less\bordered-pulled.less" />
+    <Content Include="_components\font-awesome\4.2.0\less\core.less" />
+    <Content Include="_components\font-awesome\4.2.0\less\fixed-width.less" />
+    <Content Include="_components\font-awesome\4.2.0\less\font-awesome.less" />
+    <Content Include="_components\font-awesome\4.2.0\less\icons.less" />
+    <Content Include="_components\font-awesome\4.2.0\less\larger.less" />
+    <Content Include="_components\font-awesome\4.2.0\less\list.less" />
+    <Content Include="_components\font-awesome\4.2.0\less\mixins.less" />
+    <Content Include="_components\font-awesome\4.2.0\less\path.less" />
+    <Content Include="_components\font-awesome\4.2.0\less\rotated-flipped.less" />
+    <Content Include="_components\font-awesome\4.2.0\less\spinning.less" />
+    <Content Include="_components\font-awesome\4.2.0\less\stacked.less" />
+    <Content Include="_components\font-awesome\4.2.0\less\variables.less" />
+    <Content Include="_components\font-awesome\4.2.0\scss\font-awesome.scss" />
+    <Content Include="_components\font-awesome\4.2.0\scss\_bordered-pulled.scss" />
+    <Content Include="_components\font-awesome\4.2.0\scss\_core.scss" />
+    <Content Include="_components\font-awesome\4.2.0\scss\_fixed-width.scss" />
+    <Content Include="_components\font-awesome\4.2.0\scss\_icons.scss" />
+    <Content Include="_components\font-awesome\4.2.0\scss\_larger.scss" />
+    <Content Include="_components\font-awesome\4.2.0\scss\_list.scss" />
+    <Content Include="_components\font-awesome\4.2.0\scss\_mixins.scss" />
+    <Content Include="_components\font-awesome\4.2.0\scss\_path.scss" />
+    <Content Include="_components\font-awesome\4.2.0\scss\_rotated-flipped.scss" />
+    <Content Include="_components\font-awesome\4.2.0\scss\_spinning.scss" />
+    <Content Include="_components\font-awesome\4.2.0\scss\_stacked.scss" />
+    <Content Include="_components\font-awesome\4.2.0\scss\_variables.scss" />
+    <Content Include="_components\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="_components\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="_components\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="_components\js\bootstrap.js.bundle" />
+    <Content Include="_components\js\bootstrap.min.js.map" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\js\.jscsrc" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\js\.jshintrc" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\js\tests\unit\.jshintrc" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\less\.csscomb.json" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\less\.csslintrc" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\less\alerts.less" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\less\badges.less" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\less\bootstrap.less" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\less\breadcrumbs.less" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\less\button-groups.less" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\less\buttons.less" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\less\carousel.less" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\less\close.less" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\less\code.less" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\less\component-animations.less" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\less\dropdowns.less" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\less\forms.less" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\less\glyphicons.less" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\less\grid.less" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\less\input-groups.less" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\less\jumbotron.less" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\less\labels.less" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\less\list-group.less" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\less\media.less" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\less\mixins.less" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\less\mixins\alerts.less" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\less\mixins\background-variant.less" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\less\mixins\border-radius.less" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\less\mixins\buttons.less" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\less\mixins\center-block.less" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\less\mixins\clearfix.less" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\less\mixins\forms.less" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\less\mixins\gradients.less" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\less\mixins\grid-framework.less" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\less\mixins\grid.less" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\less\mixins\hide-text.less" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\less\mixins\image.less" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\less\mixins\labels.less" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\less\mixins\list-group.less" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\less\mixins\nav-divider.less" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\less\mixins\nav-vertical-align.less" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\less\mixins\opacity.less" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\less\mixins\pagination.less" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\less\mixins\panels.less" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\less\mixins\progress-bar.less" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\less\mixins\reset-filter.less" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\less\mixins\resize.less" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\less\mixins\responsive-visibility.less" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\less\mixins\size.less" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\less\mixins\tab-focus.less" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\less\mixins\table-row.less" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\less\mixins\text-emphasis.less" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\less\mixins\text-overflow.less" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\less\mixins\vendor-prefixes.less" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\less\modals.less" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\less\navbar.less" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\less\navs.less" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\less\normalize.less" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\less\pager.less" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\less\pagination.less" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\less\panels.less" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\less\popovers.less" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\less\print.less" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\less\progress-bars.less" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\less\responsive-embed.less" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\less\responsive-utilities.less" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\less\scaffolding.less" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\less\tables.less" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\less\theme.less" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\less\thumbnails.less" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\less\tooltip.less" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\less\type.less" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\less\utilities.less" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\less\variables.less" />
+    <Content Include="_components\z_processCOMPONENTS\bootstrap\less\wells.less" />
+    <Content Include="_components\z_processCOMPONENTS\myLESS\customstyles.less" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>55465</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:55465/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
